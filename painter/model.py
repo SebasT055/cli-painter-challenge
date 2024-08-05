@@ -79,7 +79,7 @@ class Rectangle:
         plt.axis("scaled")
         plt.show()
 
-    def __str__(self) ->:
+    def __str__(self) -> str:
         x1, y1 = self.point_1
         x2, y2 = self.point_2
         return f"Rectangle with vertices at {x1, y1} and {x2, y2}"
@@ -88,31 +88,31 @@ class Rectangle:
 
 
 class Painter:
-    pass
-FILE = ".painter"
 
-def __init__(self) -> None:
-    self.shapes: list = []
-    self._load()
+    FILE = ".painter"
 
-def _load(self) -> None:
-    try:
-        with open(Painter.FILE, "rb") as f:
-            self.shapes = pickle.load(f)
-    except (EOFError, FileNotFoundError):
+    def __init__(self) -> None:
+        self.shapes: list = []
+        self._load()
+
+    def _load(self) -> None:
+        try:
+            with open(Painter.FILE, "rb") as f:
+                self.shapes = pickle.load(f)
+        except (EOFError, FileNotFoundError):
+            self.shapes = []
+
+    def _save(self) -> None:
+        with open(Painter.FILE, "wb") as f:
+            pickle.dump(self.shapes, f)
+
+    def add_shape(self, shape) -> None:
+        self.shapes.append(shape)
+        self._save()
+
+    def total_area(self) -> float:
+        return sum(shape.area() for shape in self.shapes)
+
+    def clear(self) -> None:
         self.shapes = []
-
-def _save(self) -> None:
-    with open(Painter.FILE, "wb") as f:
-        pickle.dump(self.shapes, f)
-
-def add_shape(self, shape) -> None:
-    self.shapes.append(shape)
-    self._save()
-
-def total_area(self) -> float:
-    return sum(shape.area() for shape in self.shapes)
-
-def clear(self) -> None:
-    self.shapes = []
-    self._save()
+        self._save()
