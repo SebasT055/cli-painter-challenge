@@ -1,3 +1,4 @@
+import math
 import matplotlib.pyplot as plt
 import pickle
 
@@ -8,11 +9,20 @@ class Point:
         self.y: float = y
 
 class Circle:
+
     def __init__(self, center: Point, radius: float):
         self.center: Point = center
         self.radius: float = radius
 
-    def
+    def area(self):
+        area_circulo = math.pi * (self.radius**2)
+        return area_circulo
+
+    def draw(self):
+        circle = plt.Circle((self.center.x, self.center.y), self.radius, color="r")
+        plt.gca().add_patch(circle)
+        plt.axis("scaled")
+        plt.show()
 
 class Triangle:
     pass
