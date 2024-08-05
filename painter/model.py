@@ -5,30 +5,32 @@ import pickle
 class Point:
 
     def __init__(self, x: float, y: float):
-        self.x: float = x
-        self.y: float = y
+        self.x = x
+        self.y = y
+
+
 
 class Circle:
 
     def __init__(self, center: Point, radius: float):
-        self.center: Point = center
-        self.radius: float = radius
+        self.center = center
+        self.radius = radius
 
     def area(self):
         area_circulo = math.pi * (self.radius**2)
         return area_circulo
-
-center = Point(5, 5)
-radius = 3.0
-circle = Circle(center, radius)
-print(f"El área del círculo es: {circle.area()}")
-circle.draw()
 
     def draw(self):
         circle = plt.Circle((self.center.x, self.center.y), self.radius, color="r")
         plt.gca().add_patch(circle)
         plt.axis("scaled")
         plt.show()
+
+    def __str__(self):
+        return Circle with center at (x, y) and radius r
+
+
+
 
 class Triangle:
     pass
