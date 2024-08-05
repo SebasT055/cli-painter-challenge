@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 import pickle
 
 class Point:
@@ -7,7 +8,11 @@ class Point:
         self.y: float = y
 
 class Circle:
-    pass
+    def __init__(self, center: Point, radius: float):
+        self.center: Point = center
+        self.radius: float = radius
+
+    def
 
 class Triangle:
     pass
