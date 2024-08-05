@@ -32,7 +32,6 @@ class Circle:
 
 
 
-
 class Triangle:
     def __init__(self, point_1: Point, point_2: Point, point_3: Point):
         self.point_1 = point_1
