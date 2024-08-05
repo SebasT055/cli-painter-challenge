@@ -67,9 +67,9 @@ class Rectangle:
         self.point_2 = point_2
 
     def area(self)->float:
-        long =
-        height =
-        area_rectangle = long * height
+        width = abs(self.point_2.x - self.point_1.x)
+        height = abs(self.point_2.y - self.point_1.y)
+        area_rectangle = width * height
         return area_rectangle
 
     def draw(self):
