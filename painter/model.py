@@ -63,13 +63,33 @@ class Triangle:
 
 
 class Rectangle:
-    pass
+    def __init__(self, point_1: Point, point_2: Point):
+        self.point_1 = point_1
+        self.point_2 = point_2
+
+    def area(self)->float:
+        long =
+        height =
+        area_rectangle = long * height
+        return area_rectangle
+
+    def draw(self):
+        x = [self.point_1.x, self.point_2.x, self.point_2.x, self.point_1.x, self.point_1.x]
+        y = [self.point_1.y, self.point_1.y, self.point_2.y, self.point_2.y, self.point_1.y]
+        plt.fill(x, y, color='g')
+        plt.axis("scaled")
+        plt.show()
+
+    def __str__(self) ->:
+        x1, y1 = self.point_1
+        x2, y2 = self.point_2
+        return f"Rectangle with vertices at {x1, y1} and {x2, y2}"
 
 
 
 
 class Painter:
-
+    pass
 FILE = ".painter"
 
 def __init__(self) -> None:
