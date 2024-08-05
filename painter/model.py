@@ -18,6 +18,12 @@ class Circle:
         area_circulo = math.pi * (self.radius**2)
         return area_circulo
 
+center = Point(5, 5)
+radius = 3.0
+circle = Circle(center, radius)
+print(f"El área del círculo es: {circle.area()}")
+circle.draw()
+
     def draw(self):
         circle = plt.Circle((self.center.x, self.center.y), self.radius, color="r")
         plt.gca().add_patch(circle)
