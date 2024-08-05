@@ -9,14 +9,13 @@ class Point:
         self.y = y
 
 
-
 class Circle:
 
     def __init__(self, center: Point, radius: float):
         self.center = center
         self.radius = radius
 
-    def area(self) ->float:
+    def area(self) -> float:
         area_circle = math.pi * (self.radius**2)
         return area_circle
 
@@ -38,13 +37,12 @@ class Triangle:
         self.point_2 = point_2
         self.point_3 = point_3
 
-    def area(self) ->float:
+    def area(self) -> float:
         x1, y1 = self.point_1
         x2, y2 = self.point_2
         x3, y3 = self.point_3
         area_triangle = 0.5 * abs(x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2))
         return area_triangle
-
 
     def draw(self):
         x = [self.point_1.x, self.point_2.x, self.point_3.x, self.point_1.x]
@@ -66,7 +64,7 @@ class Rectangle:
         self.point_1 = point_1
         self.point_2 = point_2
 
-    def area(self)->float:
+    def area(self) -> float:
         width = abs(self.point_2.x - self.point_1.x)
         height = abs(self.point_2.y - self.point_1.y)
         area_rectangle = width * height
