@@ -16,9 +16,9 @@ class Circle:
         self.center = center
         self.radius = radius
 
-    def area(self):
-        area_circulo = math.pi * (self.radius**2)
-        return area_circulo
+    def area(self) ->float:
+        area_circle = math.pi * (self.radius**2)
+        return area_circle
 
     def draw(self):
         circle = plt.Circle((self.center.x, self.center.y), self.radius, color="r")
@@ -26,8 +26,9 @@ class Circle:
         plt.axis("scaled")
         plt.show()
 
-    def __str__(self):
-        return Circle with center at (x, y) and radius r
+    def __str__(self) -> str:
+        x, y = self.center
+        return f"Circle with center at ({x}, {y}) and radius {self.radius}"
 
 
 
@@ -38,8 +39,13 @@ class Triangle:
         self.point_2 = point_2
         self.point_3 = point_3
 
-    def area(self):
-        area_triangulo =
+    def area(self) ->float:
+        x1, y1 = self.point_1
+        x2, y2 = self.point_2
+        x3, y3 = self.point_3
+        area_triangle = 0.5 * abs(x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2))
+        return area_triangle
+
 
     def draw(self):
         x = [self.point_1.x, self.point_2.x, self.point_3.x, self.point_1.x]
@@ -47,6 +53,13 @@ class Triangle:
         plt.fill(x, y, color='b')
         plt.axis("scaled")
         plt.show()
+
+    def __str__(self) -> str:
+        x1, y1 = self.point_1
+        x2, y2 = self.point_2
+        x3, y3 = self.point_3
+        return f"Triangle with vertices at {x1, y1}, {x2, y2} and {x3, y3}"
+
 
 
 class Rectangle:
