@@ -86,9 +86,11 @@ class Rectangle:
         plt.show()
 
     def __str__(self) -> str:
-        x1, y1 = self.point_1
-        x2, y2 = self.point_2
-        return f"Rectangle with vertices at {x1, y1} and {x2, y2}"
+        xa = self.point_1.x
+        ya = self.point_1.y
+        xb = self.point_2.x
+        yb = self.point_2.y
+        return f"Rectangle with vertices at {xa, ya} and {xb, yb}"
 
 
 
