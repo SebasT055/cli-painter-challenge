@@ -15,6 +15,7 @@ class Circle:
         self.center = center
         self.radius = radius
 
+    #function area from Circle
     def area(self) -> float:
         area_circle = math.pi * (self.radius**2)
         return area_circle
