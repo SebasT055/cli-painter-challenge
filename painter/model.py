@@ -39,10 +39,13 @@ class Triangle:
         self.point_3 = point_3
 
     def area(self) -> float:
-        x1, y1 = self.point_1
-        x2, y2 = self.point_2
-        x3, y3 = self.point_3
-        area_triangle = 0.5 * abs(x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2))
+        xa = self.point_1.x
+        ya = self.point_1.y
+        xb = self.point_2.x
+        yb = self.point_2.y
+        xc = self.point_3.x
+        yc = self.point_3.y
+        area_triangle = 0.5 * abs(xa * (yb - yc) + xb * (yc - ya) + xc * (ya - yb))
         return area_triangle
 
     def draw(self):
