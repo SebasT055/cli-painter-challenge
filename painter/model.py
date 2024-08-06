@@ -56,10 +56,14 @@ class Triangle:
         plt.show()
 
     def __str__(self) -> str:
-        x1, y1 = self.point_1
-        x2, y2 = self.point_2
-        x3, y3 = self.point_3
-        return f"Triangle with vertices at {x1, y1}, {x2, y2} and {x3, y3}"
+        xa = self.point_1.x
+        ya = self.point_1.y
+        xb = self.point_2.x
+        yb = self.point_2.y
+        xc = self.point_3.x
+        yc = self.point_3.y
+        return f"Triangle with vertices at {xa, ya}, {xb, yb}, and {xc, yc}"
+
 
 
 
